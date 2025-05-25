@@ -24,7 +24,7 @@ import useVuelidate from '@vuelidate/core';
 import { projectStore } from '../store/project';
 import { required } from '@vuelidate/validators';
 
-//const projectStore = projectStore()
+const pStore = projectStore()
 
 const form = ref({name: '', status:'activo'})
 
@@ -33,10 +33,9 @@ const $v = useVuelidate(rules, {form})
 
 
 const onSubmit = async ()=>{
-
     $v.value.$touch()
     if($v.value.$invalid) {return}
-    await projectStore.addProject(form.value)
+    await pStore.addProject(form.value)
     form.value.name = ''
 }
 

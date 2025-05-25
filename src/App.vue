@@ -7,6 +7,9 @@
           <li class="nav-item">
             <RouterLink class="nav-link" to="/projects">Proyectos</RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" to="/tasks">Tareas</RouterLink>
+          </li>
         </ul>
       </div>
     </nav>

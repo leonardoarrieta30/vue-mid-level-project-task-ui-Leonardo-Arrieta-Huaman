@@ -5,7 +5,7 @@ import TaskList from "../views/TaskList.vue";
 const routes = [
     { path : '/', redirect: '/projects'},
     { path: '/projects', component: ProjectList},
-    { path: '/task', component: TaskList},
+    { path: '/tasks', component: TaskList},
 ]
 
 export default createRouter({

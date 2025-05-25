@@ -25,7 +25,7 @@
             </select>
 
         </div>
-        <button class="btn btn-success">Guardar tarea</button>
+        <button class="btn btn-success" >Guardar tarea</button>
     </form>
 
 
@@ -41,7 +41,7 @@ import { ref } from 'vue';
 import { required } from '@vuelidate/validators';
 import useVuelidate from '@vuelidate/core';
 
-    const taskStore = taskStore()
+    const tStore = taskStore()
     const route = useRoute()
     const form = ref({
         title: '',
@@ -56,7 +56,7 @@ import useVuelidate from '@vuelidate/core';
     const onSubmit = async () => {
         $v.value.$touch()
         if($v.value.$invalid) {return}
-        await taskStore.addTask(form.value)
+        await tStore.addTask(form.value)
         form.value.title = ''
     }
 
